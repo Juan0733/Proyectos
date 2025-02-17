@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 16px;
+    background-color: #f8f8f8;
+}
+
+#card-container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    max-width: 100%;
+    place-items: center;
+    
+}
+
+
+
+.sp{
+    font-weight: 300;
+}
+
+#card_evento{
+    width: 290px;
+    border:  1px solid #E2E2E2;    
+    min-height: 364px;
+    margin-bottom: 170px;
+    position: relative;
+    border-radius: 10px;
+}
+
+#card_evento:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: 2ms;
+    width: 300px;
+    cursor: pointer;
+}
+
+#card_evento img{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#card_evento .h3 {
+    font-size: 16px;
+    font-weight:100;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.participando{
+    text-align: center;
+    color: #39A900;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+
+#card_evento button{
+    background: #39A900;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 251px;
+    height: 36px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#card_evento button:hover{
+    color: #ffffff;
+    font-size: 17px;
+    background: #379906;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: rgba(23, 228, 8, 0.2) 0px 8px 24px;
+}
+
+.filtros{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-top: 60px;
+    margin-right: 45px;
+}
+
+.filtros select{
+    color: #6b6b6b;
+    padding: 5px; 
+    border-radius: 5px; 
+    border: 1px solid #8d8d8d;
+    background: transparent;
+    margin-top: 25px;
+}
+
+#costo-total{
+    font-weight: 600;
+    color: #39A900;
+    margin-top: 10px;
+    font-size: 19px;
+    
+}
+
+p, .p{
+    font-weight: 600;
+}
+
+.p{
+    margin-top: 8px;
+}
+
+.icons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 0;
+    margin-bottom: 10px;
+}
+
+#titulo{
+    text-align: center;
+    margin-top: -50px;
+    color: #ffffff;
+    text-shadow: 2px 2px  rgb(35, 35, 35);
+    text-transform: capitalize;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+}
+
+.icon-delete:hover {
+    color: darkred;
+}
+
+.icon-delete{
+    color: grey;
+}
+
+.ion-edit{
+    color: mediumblue;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+#vent_n h3{
+    text-align: center;
+}
+
+.msg{
+    position: absolute;
+    text-shadow: 1px 2px gainsboro;
+    text-align: center;
+}
+
+
+#filtros{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-top: 90px;
+    margin-right: 45px;
+    
+    align-items: end;
+}
+
+#filtros select{
+    color: #6b6b6b;
+    padding: 5px; 
+    border-radius: 5px; 
+    border: 1px solid #8d8d8d;
+    background: transparent;
+    margin-top: 25px;
+}
+
+#filtros .add{
+    
+    margin: 8px;
+}
+
+
+i{
+    cursor: pointer;
+    
+}

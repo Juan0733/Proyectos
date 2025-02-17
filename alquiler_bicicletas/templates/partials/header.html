@@ -1,0 +1,43 @@
+
+
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="logo_sesion">
+        <img src="{{ url_for('static', filename='img/image.png') }}" alt="Logo" class="logo">
+        <span class="sesion">Bienvenido {{ session.get("usuario", "none")["nombres"] }}</span>
+        <div class="ul">
+            {%if session.get("usuario")["rol"] == "Usuario" %}
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mostrarEventos">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mostrarBicicletas">Bicicletas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            {%elif session.get("usuario")["rol"] == "Administrador" %}
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="/mostrarBicicletas">Bicicletas</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="/mostrarMapa">Mapa</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="/mostrarEventos">Eventos</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="/mostrarInformes">Informes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            {% endif %}
+            
+
+        </div>
+    </div>
+</header>

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+main#cuerpo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form#forma_registro {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.sesion-01 {
+    flex: 1;
+    position: relative;
+    background: url(../img/fondo-bici.jpg) no-repeat center center;
+    
+    background-size: cover;
+}
+
+.sesion-01 .logo {
+    width: 65px;
+    position: absolute;
+    top: 20px;
+    left: 31px;
+    height: 65px;
+}
+
+.sesion-01 h1 {
+    font-size: 40px;
+    color: #333;
+    margin-top: 195px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 1px 1px white;
+}
+
+
+
+#sesion-02 {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+}
+
+#sesion-02 h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+#sesion-02 input,
+#sesion-02 select {
+    width: 80%; 
+    margin: 10px auto; /* Reducido para más espacio entre los inputs */
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #9c9c9c;
+    background: transparent;
+    font-size: 16px;
+}
+
+
+
+#sesion-02 input::placeholder {
+    color: #333;
+}
+
+.ancho-full {
+    width: 100%;
+    font-size: 16px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 80%; 
+    display: inline-block; 
+    margin-left: 60px;
+}
+
+#btn_registro {
+    width: 80%; 
+    margin: 20px auto; 
+    padding: 10px;
+    background-color: #39A900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn_registro:hover {
+    color: #ffffff;
+    font-size: 17px;
+    background: #379906;
+    box-shadow: 2px 2px #39A900;
+}
+
+#error {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+}

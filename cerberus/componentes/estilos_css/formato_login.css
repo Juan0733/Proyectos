@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.8s ease;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/cab.jpeg') center center / cover no-repeat;
+    background-size: cover;
+}
+
+#padre {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#cont_formulario {
+    background: rgba(255, 255, 255, 0.58);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 33, 33, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    position: relative;
+}
+
+#logo {
+    width: 100px;
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+}
+
+#logo_cer {
+    display: block;
+    margin: 20px auto;
+    width: 60px;
+    height: 60px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label {
+    font-size: 14px;
+    color: #414043;
+    padding: 40px 0px 0px 0px;
+}
+
+#documento, #codigo_pw {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #414043;
+    background: transparent;
+    color: #000000;
+    font-size: 14px;
+    outline: none;
+}
+
+.btn-bg-verde {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #39A900;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+
+@media screen and (max-width: 640px) {
+    #cont_formulario {
+        width: 87.2%;
+    }
+
+    #logo {
+        margin-top: 25px;
+        width: 80px;
+    }
+
+    #logo_cer {
+        margin-top: 50px;
+        width: 70px;
+        height: 70px;
+    }
+    
+
+    label {
+        font-size: 14px;
+    }
+    #documento, #codigo_pw {
+        margin: 0;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .btn-bg-verde {
+        font-size: 14px;
+    }
+}

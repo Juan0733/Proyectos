@@ -1,0 +1,158 @@
+#contenedor_tabla{
+    display: none;
+}
+
+
+#contenedor-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn{
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    /* background: #007735; */
+    padding: 3em;
+    margin: 1.5em 0 1em;
+    cursor: pointer;
+}
+.btn-entrada{
+    background: var(--color_boton-entrada);
+}
+
+.btn-salida{
+    background: var(--color_boton-salida)
+}
+    .btn h3{
+        color: rgb(255, 255, 255);
+    }
+
+    .btn figure{
+        height: 12vh;
+        margin: 10px 0;
+    }
+
+        .btn figure img{
+            width: 100%;
+            height: 100%;
+        }
+
+@media(max-width: 767px){
+
+    #contenedor-btns{
+        flex-direction: column;
+        height: clamp(200px, 88%, 550px);
+    }
+}
+
+/* media query para cuando este horizontal */
+/* @media (max-width: 767px) and (orientation: landscape) {
+
+    .btn{
+        padding: 1em;
+    }
+
+    #contenedor-btns{
+        height: 75%;
+        
+    }
+} */
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+    #contenedor-btns{
+        flex-direction: column;
+        
+    }
+
+    .btn{
+        margin: 2.3em 0;
+    }
+
+    .btn figure{
+        height: 12vh;
+        margin: 10px 0;
+    }
+
+    .btn h3{
+        font-size: 1.8em;
+    }
+}
+
+/* @media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+
+    .btn{
+        padding: 1.5em;
+    }
+
+    #contenedor-btns{
+        height: 80%;
+        
+    }
+} */
+
+@media (min-width: 1024px){
+
+    #contenedor_tabla{
+        display: block;
+        height: 30%;
+    }
+
+    #contenedor-btns{
+        flex-direction: row;
+    }
+
+    .btn{
+        width: 40%;
+        padding: 3.5em;
+    }
+
+    .btn h3{
+        font-size: 1.8em;
+    }
+
+    #titulo_tabla{
+        color: #414043;
+        margin-bottom: 0.5em;
+        font-size: 1.6em;
+    }
+    
+    
+    #contenedor_tabla table{
+        border-collapse: collapse;
+        border-radius: 8px;
+        width: 100%;
+        height: 94px;
+    }
+
+    #contenedor_tabla table thead{
+        background: #414043;
+        color: white;
+        font-size: 2.3vh;
+        font-weight: 400;
+        border-radius: 10px;
+    }
+    
+    #contenedor_tabla table thead tr th{
+        background: #414043;
+        font-weight: 500;
+        position: sticky;
+        top: 0;
+        padding: 0.2em;
+        text-transform: capitalize;
+    }
+    
+    #contenedor_tabla table tbody tr{
+        font-size: clamp(13px, 1vw, 16px);
+        text-align: center;
+        font-weight: 600;
+    }
+       
+}

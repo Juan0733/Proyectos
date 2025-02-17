@@ -1,0 +1,224 @@
+#contenedor_menu{
+    width: 18.6%;
+    height: 100vh;
+    border-top-right-radius: 40px;
+    background: #414043;
+    position: relative;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+i{
+    color: white;
+    margin-right: 2.1vw;
+}
+
+.icon{
+    font-size: clamp(25px, 20%, 30px);
+}
+
+#icon_menu, #cerrar_menu, #logo_sena_movil, #notificacion_menu{
+    display: none;
+}
+
+.cerrar-sesion i{
+    font-size: 30px;
+}
+    
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+nav{
+    width: 100%;
+    height: 100%;
+}
+
+#contenedor_lista{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    
+    padding-left: 0;
+    /* border: 1px solid red; */
+}
+
+.contenedor-opciones{
+    /* border: 1px solid red; */
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.4vw;
+    cursor: pointer;
+    margin-top: 2.7%;
+}
+
+.contenedor-opciones h2{
+    font-weight: 600;
+    margin: 0.6em 0;
+    color: white;
+    font-size: 1.1em;
+    flex-grow: 1;
+}
+.cerrar-sesion {
+    position: absolute;
+    bottom: 15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(116, 116, 116); 
+    border-radius: 20px;
+    
+}
+.cerrar-sesion i{
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.contenedor-opciones:hover{
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(15px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.cerrar-sesion:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-logo{
+    position: absolute;
+    top: 8px;
+    width: 100%;
+}
+
+#logo-sena{
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+@media(max-width: 1023px) {
+    #contenedor_menu{
+        width: 100vw;
+        border-radius: 0px;
+        height: 0;
+        padding: 2em 0;
+    }
+
+    #contenedor_lista{
+        z-index: 100;
+        width: 100%;
+        background: rgb(65, 64, 67, 85%);
+        backdrop-filter: blur(12px); 
+        height: 100vh;
+        width: 100%;
+        display: none;
+        align-items: center;
+        position: absolute;
+        top: 0;
+    }
+
+    #cerrar_menu{
+        display: flex;
+    }
+
+    #icon_menu{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 30%;
+        margin: 0 20px;
+        font-size: 30px;
+    }
+
+    #notificacion_menu{
+        display: block;
+        position: absolute;
+        right: 2.2em;
+        font-size: 30px;
+        top: 30%;
+    }
+
+    #logo_sena_movil{
+        display: block;
+        position: absolute;
+        padding: 0;
+        margin: 0 1em;
+        top: 12%;
+        width: 50px;
+        height: 50px;
+    }
+    
+    #logo_sena_movil img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .contenedor-logo{
+        position: absolute;
+        top: 3em;
+        width: 100%;
+    }
+    
+    .icon{
+        margin-left: 34px;
+        margin-right: 23px;
+    }
+
+    .cerrar-sesion{
+        width: 50px;
+        height: 50px;
+        bottom: 3.5em;
+    }
+
+    .cerrar-sesion .icon{
+        font-size: clamp(25px, 20%, 30px);
+    }
+
+    .contenedor-opciones{
+        border-radius: 40px;
+        width: clamp(200px, 60%, 250px);
+        margin-top: 10px;
+    }
+
+    .contenedor-opciones h2{
+        margin: 12px 0;
+        font-size: 16px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1023px){
+    .contenedor-opciones h2{
+        margin: 15px 0;
+    }
+
+    .contenedor-opciones{
+        margin-top: 18px;
+    }
+}

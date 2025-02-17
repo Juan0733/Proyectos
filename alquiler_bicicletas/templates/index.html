@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciar sesion</title>
+    <link href="{{ url_for('static', filename='css/formato.css') }}" rel="stylesheet">
+    
+</head>
+<body>
+
+    <main id="cuerpo">
+        <form method="post" name="forma_iniciar" id="forma_iniciar">
+
+            <div class="sesion-01">
+                <h1 class="titulo">Bienvenido Biciweb</h1>
+            </div>
+
+            <div id="sesion-02">
+                <h2>Iniciar Sesion</h2>
+                
+                <input type="email" name="correo" class="ancho-full" id="correo" inputmode="email"  placeholder="email" required tabindex="5" maxlength="64" minlength="8">
+                <div id="error-correo" class="error-message"></div>
+
+                <input type="password" name="contrasena" class="ancho-full" id="contrasena" class="campo"  maxlength="24" minlength="2" required tabindex="2" title="solo letras el digitar letras porfa" placeholder="contraseña">
+                <div id="error-contrasena" class="error-message"></div>
+
+                <button type="submit" id="btn_registro" class="btn-activo">INGRESO</button>
+                <a href="/registrarUsuario" id="enlace_registro">REGISTRAR</a>
+
+                <p id="error"></p>
+            </div>
+                        
+        </form>
+    </main>
+    <script src="{{ url_for('static', filename='js/usuarios/validarInicio.js') }}"></script>
+
+
+    
+    
+
+    
+</body>
+</html>

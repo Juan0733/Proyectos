@@ -1,0 +1,48 @@
+.logo{
+    height: 65px;
+    width: 65px;
+    
+    
+}
+
+
+
+.logo_sesion{
+    display: flex;
+    
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    width: 94%;
+    right: 40px;
+    top: 25px;
+    gap: 15px;
+    
+    
+}
+
+.logo_sesion .sesion{
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.ul{
+    
+    position: absolute;
+    right: 0;
+    & a{
+        display: inline-block;
+        margin-left: 60px;
+        
+        
+    }
+
+    & a:hover{
+        color: #39A900;
+        font-size: 17px;
+        font-weight: 700;
+        
+    }
+    
+}
+

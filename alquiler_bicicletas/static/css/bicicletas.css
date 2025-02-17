@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inknut Antiqua", sans-serif;
+    font-size: 16px;
+    background-color: #f8f8f8;
+}
+
+#card-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    max-width: 100%;
+    place-items: center;
+}
+
+#card_bici{
+    width: 262px;
+    border:  1px solid #E2E2E2;
+    min-height: 350px;
+    
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+#card_bici:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transition: 2ms;
+    width: 265px;
+}
+
+.sp{
+    font-weight: 300;
+}
+
+#card_bici img{
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    
+}
+
+#card_bici h3 {
+    font-size: 16px;
+    font-weight:400;
+    margin-left: 20px;
+    margin-top: 15px;
+
+}
+
+#card_bici .btn{
+    background: #39A900;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto;
+    width: 241px;
+    height: 36px;
+    color: #fff;
+    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.devolver{
+    background: #F6B50D;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto;
+    width: 241px;
+    height: 36px;
+    color: #fff;
+    cursor: pointer;
+    
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.devolver:hover{
+    cursor: pointer;
+    font-weight: 600;
+    background: #ca940c;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#card_bici .btn:hover{
+    color: #ffffff;
+    font-size: 17px;
+    background: #379906;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: rgba(23, 228, 8, 0.2) 0px 8px 24px;
+}
+
+#filtros{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-top: 90px;
+    margin-right: 45px;
+    
+    align-items: end;
+}
+
+#filtros .add{
+    
+    margin: 8px;
+}
+
+#filtros select{
+    color: #6b6b6b;
+    padding: 5px; 
+    border-radius: 5px; 
+    border: 1px solid #8d8d8d;
+    background: transparent;
+    margin-top: 25px;
+}
+
+#costo-total{
+    font-weight: 600;
+    color: #39A900;
+    margin-top: 10px;
+    font-size: 19px;
+    
+}
+
+p, .p{
+    font-weight: 600;
+}
+
+.p{
+    margin-top: 8px;
+}
+
+.icons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 0;
+}
+
+.icon-delete:hover {
+    color: darkred;
+}
+
+.icon-delete{
+    color: grey;
+}
+
+.ion-edit{
+    color: mediumblue;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+#modal{
+    font-weight: 200;
+    text-align: left;
+    margin-left: 55px;
+}

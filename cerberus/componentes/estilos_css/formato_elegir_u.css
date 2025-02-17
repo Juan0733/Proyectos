@@ -1,0 +1,75 @@
+#forma_registro{
+    border-radius: 13px;
+    padding: 1.8em;
+    width: clamp(330px, 40%, 700px);
+    background: #E7E7E7;
+    color: #414043;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+    #forma_registro #contenedor_titulo_icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #forma_registro #contenedor_titulo_icon h1{
+        font-size: 1.5em;
+    }
+
+    #forma_registro #contenedor_titulo_icon .cerrar_modal{
+        color: red;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    
+
+    #forma_registro label{
+        display: block;
+        margin-top: 1.7em;
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    #forma_registro select{
+        margin-top: 1em;
+        display: block;
+        background: transparent;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 2px solid #414043 ;
+        width: 100%;
+        font-size: 1em;
+        padding: 5px 0;
+    }
+    
+
+    #forma_registro .contenedor_btn{
+        display: flex;
+        justify-content: right;
+        
+        
+    }
+    
+
+    #forma_registro .contenedor_btn .btn{
+        background:  #007735;
+        color: #fff;
+        border-radius: 13px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        margin-top: 2em;
+        padding: 9px 12px;
+        cursor: pointer;
+    }
+
+    #forma_registro .contenedor_btn .btn:hover{
+        background:   #014d23;
+        
+    }

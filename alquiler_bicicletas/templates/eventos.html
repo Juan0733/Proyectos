@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | tu bici</title>
+
+    <link href="{{ url_for('static', filename='css/evento.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="{{ url_for('static', filename='js/eventos/mostrarEventos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/eventos/agregarEvento.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    {% include('partials/header.html') %}
+
+    <article id="filtros">
+        <select name="filtro_evento" id="filtro_evento">
+            <option value="activos">Nuevos</option>
+            {%if session.get("usuario")["rol"] == "Usuario" %}
+                <option value="participando">Participando</option>
+            {% endif %}
+            <option value="vencidos">Antiguos</option>
+        </select>
+        {% if session.get("usuario")["rol"] == "Administrador" %}
+            <i class="fa-solid fa-plus add" data-bs-toggle="modal" data-bs-target="#addModal"></i>
+        {% endif %}
+
+    </article>
+
+    <div id="card-container">
+        {% if msg %}
+            <h1 class="msg">{{msg}}</h1>
+        {% else %}
+            {% for evento in eventos %}
+                <article id="card_evento">
+                    <img src="uploads/{{evento.foto}}">
+                    <h3 id="titulo">{{evento.nombre}}</h3>
+                    <h3 class="h3">Descripcion: <span class="sp">{{evento.descripcion}}</span></h3>
+                    <h3 class="h3">Fecha: <span class="sp">{{evento.fecha}}</span></h3>
+                    <h3 class="h3">Lugar: <span class="sp">{{evento.lugar}}</span></h3>
+                    {% if session.get('usuario')['rol'] == 'Usuario' %}
+                        <button class="participar" data-id="{{evento.pk_evento}}">PARTICIPAR</button>
+                    {% elif session.get('usuario')['rol'] == 'Administrador' %}
+                        <div class="icons">
+                            <i class="fa-regular fa-pen-to-square ion-edit editar" 
+                                data-bs-toggle="modal" data-bs-target="#editar"
+                                role="button" id="editarr" data-evento="{{evento.pk_evento}}">
+                            </i>
+                            
+                            <i class="fa-solid fa-trash icon-delete" data-id="{{evento.pk_evento}}"></i>
+                            
+                        </div>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        {% endif %}
+               
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Registro de Eventos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" name="registro_evento" id="registro_evento" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="nombre">Nombre del Evento:</label>
+                    <input type="text" name="nombre" id="nombre" required class="form-control">
+                    <div id="error-nombre" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                  <label for="descripcion">Descripcion:</label>
+                  <input type="text" name="descripcion" id="descripcion" required class="form-control">
+                  <div id="error-descripcion" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                    <label for="lugar">Lugar:</label>
+                    <input type="text" name="lugar" id="lugar" required class="form-control">
+                    <div id="error-lugar" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                  <label for="Fecha">Fecha:</label>
+                  <input type="datetime-local" name="fecha" id="fecha" required class="form-control">
+                  <div id="error-fecha" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                  <label for="foto_evento">Foto del Evento:</label>
+                  <input type="file" name="foto_evento" id="foto_evento" class="form-control">
+                  <div id="error-foto_evento" class="error-message text-danger"></div>
+                </div>
+      
+                <p id="error_evento" class="text-danger"></p>
+      
+                <button type="submit" class="btn btn-success float-end" id="agregar">AGREGAR</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editar" tabindex="-1"  aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar Evento</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="post" name="editar_evento" id="editar_evento" >
+                <div class="mb-3">
+                    <label for="nombre">Nombre del Evento:</label>
+                    <input type="text" name="nombre" id="nombre-editar" required class="form-control">
+                    <div id="error-nombre" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                  <label for="descripcion">Descripcion:</label>
+                  <input type="text" name="descripcion" id="descripcion-editar" required class="form-control">
+                  <div id="error-descripcion" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                    <label for="lugar">Lugar:</label>
+                    <input type="text" name="lugar" id="lugar-editar" required class="form-control">
+                    <div id="error-lugar" class="error-message text-danger"></div>
+                </div>
+      
+                <div class="mb-3">
+                  <label for="Fecha">Fecha:</label>
+                  <input type="datetime-local" name="fecha" id="fecha-editar" required class="form-control">
+                  <div id="error-fecha" class="error-message text-danger"></div>
+                </div>
+      
+                
+      
+                <p id="error_evento" class="text-danger"></p>
+      
+                <button type="submit" class="btn btn-success float-end" id="agregar">EDITAR</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- <form method="post" id="form_evento" name="form_evento">
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre del evento">
+        <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion">
+        <label for="fecha">Fecha y hora del evento</label>
+        <input type="datetime" id="fecha" name="fecha" required>
+        <input type="text" id="lugar" name="lugar"  placeholder="Lugar" required>
+        <button>CONFIRMAR</button>
+    </form> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERBERUS</title>
+    <link rel="stylesheet" href="../estilos_css/aprendiz_qr.css">
+    <link rel="icon" href="../img/logo_c_negro.png" type="image/png">
+</head>
+<body>
+    <form id="form_aprendiz" action="../../servicios/reg_aprendices.php" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="contenedor" id="bloque1">
+            <h2>REGISTRO APRENDIZ</h2>
+
+            <label for="tipo_documento">Tipo de Documento:</label>
+            <select name="tipo_documento" id="tipo_documento" required tabindex="1">
+                <option value="" disabled selected>Seleccione</option>
+                <option value="CC">CC</option>
+                <option value="TI">TI</option>
+                <option value="CE">CE</option>
+                <option value="PEP">PEP</option>
+                <option value="PAS">PAS</option>
+            </select>
+
+            <label for="numero_documento">Número de Documento:</label>
+            <input type="text" id="numero_documento" name="numero_documento"
+                pattern="[A-Za-z0-9]{6,15}" maxlength="15" minlength="6" title="Ingrese el número de documento (solo números)" required tabindex="2" placeholder="1112XXXXX">
+
+            <label for="nombres">Nombre completo:</label>
+            <input type="text" id="nombres" name="nombres"
+                pattern="[A-Za-zÁÉÍÚÑáeiou\s]{3,25}" maxlength="25" minlength="3" title="Ingrese los nombres completos (solo letras)" required tabindex="3" placeholder="Karen Tatiana">
+
+            <label for="apellidos">Apellido completo:</label>
+            <input type="text" id="apellidos" name="apellidos"
+                pattern="[A-Za-zÁÉÍÚÑáeiou\s]{3,30}" maxlength="30" minlength="3" title="Ingrese los apellidos completos (solo letras)" required tabindex="4" placeholder="Aguilera Salcedo">
+            
+            <button type="button" class="btn_continuar" name="btn_continuar" id="btn_continuar" disabled>CONTINUAR</button>
+        </div>
+
+        <div class="contenedor" id="bloque2" style="display:none;">
+            <h2>REGISTRO APRENDIZ</h2>
+            <label for="movil">Número de teléfono:</label>
+            <input type="text" id="movil" name="movil" inputmode="tel"
+                maxlength="10" minlength="10" title="Ingrese el número de teléfono (solo números)" required tabindex="5" placeholder="310XXXXXXX">
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="text" id="correo" name="correo"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" maxlength="64" minlength="2"
+                    title="Ingrese un correo electrónico válido" required tabindex="6" placeholder="aguilera@gmail.com">
+
+            <label for="ficha">Número de Ficha:</label>
+            <input type="text" id="ficha" name="ficha" pattern="[0-9]{7}" maxlength="7" minlength="7" title="Ingrese el numero de ficha (solo numeros)" required tabindex="7" placeholder="27XXXXX">
+            
+
+            <label for="programa">Programa:</label>
+            <input type="text" id="programa" name="programa" list="programas" pattern="[A-Za-z0-9ÁÉÍÚÑ\s]{4,50}" maxlength="50" minlength="4" title="Ingrese el nombre del programa (solo letras)" required tabindex="8" placeholder="Analisis y desarrollo de software">
+            <datalist id="programas">
+            </datalist>
+
+            <input type="hidden" name="tipo_registro" value="autoregistro">
+
+                <button type="button" name="btn_volver" id="btn_volver" class="btn_volver">VOLVER</button>
+
+            <button type="submit" name="btn_registrar" id="btn_registrar" >REGISTRAR</button>
+        </div>
+    </form>
+    <script src="../funciones/autoregistro/script_form.js"></script>
+    <script src="../funciones/autoregistro/programas.js"></script>
+</body>
+</html>

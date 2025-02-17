@@ -1,0 +1,22 @@
+.cuerpo-contenedor {
+    display: flex;
+    /* padding: 20px; */
+    background-color: #F1F1F1;
+    height: 100%;
+    width:  100%;
+}
+
+header {
+    color: white;
+}
+
+.contenedor-pagina {
+    padding: 20px;
+    /* background-color: white; */
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}

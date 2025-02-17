@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Cerberus</title>
+    <link rel="stylesheet" href="componentes/estilos_css/formato_login.css">
+    <link rel="icon" href="componentes/img/logo_c_negro.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="componentes/funciones/login/login.js" type="module"></script>
+</head>
+<body>
+    <main id="padre" name="padre">
+        <article id="cont_formulario">
+            <img src="./componentes/img/logo.png" alt="Logo SENA" id="logo">
+            <form id="forma_acceso">
+                <label for="documento">Cédula</label>
+                <input type="text" name="documento" id="documento"
+                pattern="[a-zA-Z0-9]{6,15}" placeholder="" maxlength="15"
+                minlength="6" required tabindex="1">
+
+                <label for="codigo_pw">Contraseña</label>
+                <input type="password" name="codigo_pw" id="codigo_pw"
+                placeholder="" pattern="[a-zA-Z0-9]{8,15}"
+                maxlength="15" minlength="8" required tabindex="2">
+
+                <button type="submit" id="btn_ingresar"
+                name="btn_ingresar" class="btn-bg-verde">INGRESAR</button>
+
+                <img src="componentes/img/logo_c_gris.png" alt="Logo CERBERUS" id="logo_cer">
+            </form>
+        </article>
+    </main>
+</body>
+</html>

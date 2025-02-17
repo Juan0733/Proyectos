@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    transition: all 0.4s;
+}
+a{
+    text-decoration: none;
+    color: rgb(41, 37, 37);
+}
+:root{
+    --main-color: #EF2A3A;
+    --color-second: #262626;
+
+
+    --color-primario:  #508fb1;
+    --color-secundario:  #E9E9E9 ; /* PLACE COLOR, SECOND COLOR */
+    --color-terciario: #051e35;
+    --color-cuaterniario: #577a8f;
+    --color-quinto: #bdc5cb;
+
+    --color-texto: #414042;
+    --color-btn-cancelar: #c9c9c9;
+    --color-placeholder: #4A4A4A;
+    --background-inputs: #D1D3D4;
+    --color-transparente: #04060700;
+}
+body, html{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.btn-confirmacion{
+    border: none;
+    border-radius: 14px;
+    color: var(--color-primario);
+}
+
+
+
+
+

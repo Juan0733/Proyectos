@@ -1,0 +1,77 @@
+#forma_registro{
+    border-radius: 13px;
+    padding: 1.8em;
+    width: clamp(300px, 45%, 800px);
+    
+    background: #E7E7E7;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    #forma_registro #contenedor_titulo_icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #forma_registro #contenedor_titulo_icon h1{
+        color: #414043;
+        font-size: 1.5em;
+    }
+
+    #forma_registro #contenedor_titulo_icon .cerrar_modal{
+        color: red;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    #forma_registro #contenedor_inputs{
+        width: 100%;
+        
+    }
+    
+
+    #forma_registro label{
+        color: #414043;
+        display: block;
+        margin-top: 1em;
+        font-size: 1em;
+    }
+
+    #forma_registro input, select{
+        color: #414043;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid;
+        background: transparent;
+        margin: 0.5em 0 1em 0;
+        font-size: 1em;
+    }
+
+    #forma_registro select{
+        width: 100%;
+        
+    }
+
+    #forma_registro .contenedor_btn{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    #forma_registro .contenedor_btn .btn{
+        background:  #007735;
+        border: none;
+        color: #fff;
+        width: 60%;
+        border-radius: 13px;
+        padding: 10px;
+        font-size: 1em;
+        cursor: pointer;
+        margin: 0;
+        margin-top: 14px;
+    }

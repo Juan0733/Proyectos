@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.8s ease;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    align-items: center;
+    background-color: #E7E7E7;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
+h2.registro-exitoso {
+    color: #007735;
+}
+
+
+h2.registro-fallido {
+    color: rgb(158, 16, 16);
+}
+
+h2 {
+    color: #414043;
+}
+
+p {
+    font-size: 18px;
+    color: #414043;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-intentar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton-intentar-enlace {
+    display: inline-block;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+
+.btn-verde{
+    background: #007735;
+}
+
+.btn-rojo{
+    background: rgb(158, 16, 16);
+}
+
+#logo {
+    max-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+
+#logo-cerberus {
+    max-width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,513 @@
+/* diseño de pc */
+#contenedor_usuarios{
+    
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 19px auto 25px;
+}
+
+#contedor_usuarios, #btn_usuarios{
+    display: flex;
+    margin: 0;
+    border-radius: 10px;
+    
+}
+
+#btn_usuarios button{
+    border: none;
+    background: var(--color-fondo-b);
+    margin: 0;
+    padding: 0;
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--color-blanco);
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    transition: transform 0.2s, color 0.1s;
+    padding: 9px 14px;
+    margin-right: 1em;
+    text-align: center;
+}
+
+#btn_usuarios button:hover{
+    transform: scale(1.1);
+    background: var(--color_fondo-pr);
+}
+
+#cont_busqueda_add{
+    gap: 2.1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#cont_busqueda_add i {
+    margin: 0;
+    color: #FBFBFB;
+    font-size: 2.7vh; 
+}
+#cont_busqueda_add #agregar_usuario{
+    width: 3.6vw;
+    height: 100%;
+    background: var(--color-fondo-b);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+#cont_busqueda_add #agregar_usuario:hover {
+     background: var(--color_fondo-pr);
+    transform: scale(1.10);
+}
+
+#cont_busqueda_usuario{
+    background: #FBFBFB;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 17.0vw;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#cont_busqueda_usuario i{
+    color: #878689;
+    margin: 0;
+    margin: 0 1vw;
+}
+
+#cont_busqueda_usuario input{
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: clamp(1em, 1vw, 1.7em);
+    color: var(--color-texto); 
+}
+
+
+/* diseño de tabla */
+
+#contenedor_tabla{
+    width: 100%;
+    min-height: 307px;
+}
+
+#contenedor_tabla::-webkit-scrollbar{
+    background: transparent;
+    width: clamp(10px, 40%,20px);
+ }
+
+#contenedor_tabla::-webkit-scrollbar-thumb{
+   background: #878689;
+   border-radius: 20px;
+}
+
+#contenedor_tabla table{
+    border-collapse: collapse;
+    border-radius: 8px;
+    width: 100%;
+     
+}
+
+#contenedor_tabla table thead{
+    background: #414043;
+    color: white;
+    font-size: 2.3vh;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+#contenedor_tabla table thead tr th{
+    background: #414043;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    padding: 0.2em;
+    text-transform: capitalize;
+}
+
+#contenedor_tabla table tbody tr{
+    font-size: clamp(13px, 1vw, 16px);
+    text-align: center;
+    font-weight: 600;
+}
+    #contenedor_tabla table tbody tr td{
+        padding: 0.3em;
+
+    }
+
+#contenedor_tabla table tbody tr td i{
+    margin: 0;
+    color: var(--color-fondo-b);
+    font-size: 24px;
+    transition: transform 0.2s, color 0.2s;
+}
+#contenedor_tabla table tbody tr td .edit{
+    color: var(--color-edit);
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+#contenedor_tabla table tbody tr td .desac{
+    color: black;
+    cursor: pointer;
+    
+}
+#contenedor_tabla table tbody tr td .desac:hover{
+    transform: scale(1.30);
+    color: black;
+}
+#contenedor_tabla table tbody tr td .edit:hover{
+    color: var(--color-edit-p);
+}
+#contenedor_tabla table tbody tr td i:hover{
+    color: var(--color_fondo-pr);
+    transform: scale(1.30);
+    cursor: pointer;
+}
+
+#contenedor_tabla table tbody tr td .activar{
+    color: #fd7e14;
+    cursor: pointer;
+    
+}
+#contenedor_tabla table tbody tr td .activar:hover{
+    color: #fd7e14;
+    cursor: pointer;
+    transform: scale(1.30);
+}
+
+
+.fila-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.fila-icons-vi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+/* diseño que no van el pc */
+
+
+select#filtro_usuarios{
+    margin: 0;
+    display: none;
+    width: clamp(170px, 23%, 177px);
+    background: var(--color-fondo-b);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: var(--color-blanco); 
+    font-weight: 600;
+}
+
+article.card_usuario{
+    
+    border-radius: var(--radio-borde);
+    display: block;
+    background: var(--color-card);
+    padding: 1em;
+    position: relative;
+    display: none;
+}
+
+article.card_usuario h3{
+
+    font-size: 0.8em;
+    color: var(--color-texto);
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+article.card_usuario #cont_opc{
+    
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 1em;
+    bottom: 0.5em;
+}
+article.card_usuario #cont_opc i#ver_mas_u{
+    color: var(--color-boton-activo);
+    margin: 0;
+    font-size: clamp(24px, 60%, 30px);
+}
+
+
+#mensaje_no{
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    left: 0;
+    right: 0;
+    font-weight: 600;
+}
+
+
+
+/* diseño modal */
+/* Estilo base para la modal */
+.modal-body {
+    border-radius: 10px;
+    padding: 2em;
+    width: clamp(336px, 70%, 638px);
+    background-color: var(--color-modal);
+  }
+  
+  /* Estilos para la disposición de dos columnas en PC */
+  .modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  /* Estilo individual de cada ítem en la modal */
+  .modal-bloque h3{
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .modal-bloque span{
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  #contenedor_titulo_icon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+#contenedor_titulo_icon h1{
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+#contenedor_titulo_icon .cerrar_modal {
+    color: red;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+
+
+/* diseño de table  */
+
+@media(min-width: 768px) and (max-width: 1023px){
+
+    /* diseños que no van el table que son los botones y la tabla */
+    #contenedor_tabla table{
+        display: none;
+    }   
+    div#btn_usuarios {
+        display: none;
+    }
+
+    select#filtro_usuarios, select{
+    
+        display: block;
+        
+    }
+    #contenedor_usuarios{
+        margin: 0;
+    }
+
+    #cont_busqueda_add #agregar_usuario{
+        width: 41px;
+    }
+
+    div#cont_busqueda_add #cont_busqueda_usuario{
+        width: 23vw;
+    }
+
+    #contenedor_tabla{
+        
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 232px));
+        grid-auto-rows: min-content;
+        gap: 1.3em;
+        justify-content: space-between;
+        margin: 30px 0 0 0;
+    }
+
+    #contenedor_tabla::-webkit-scrollbar {
+        display: none; /* Oculta la barra en Chrome, Safari y Edge */
+    }
+
+    article.card_usuario{
+
+        display: block;
+        
+    }
+
+    article.card_usuario h3{
+        display: block;
+    }
+
+    article.card_usuario #cont_opc{
+        
+        display: flex;
+        gap: 7px;
+    }
+
+    article.card_usuario #cont_opc i{
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+         /* Agrega scroll en tablet y móvil */
+         /* Ajusta la altura según lo necesario */
+      }
+      
+    
+    
+    .activar{
+        color: #fd7e14;
+        margin: 0;
+        
+    }
+    .activar:hover{
+        color: #fd7e14;
+        cursor: pointer;
+        transform: scale(1.30);
+    }
+    .card_usuario .icon{
+        color: var(--color_fondo-pr);
+        margin: 0;
+    }
+    .edit{
+        color: var(--color-edit);
+        margin: 0;
+    }
+    .desac{
+        color: black;
+        margin: 0;
+    }
+}
+
+/* diseño para celular */
+@media(max-width: 767px){
+    /* diseños que no van el table que son los botones y celular*/
+    #contenedor_tabla table{
+        display: none;
+    }   
+    div#btn_usuarios {
+        display: none;
+    }
+    select#filtro_usuarios, select{
+        margin: 0;
+        display: block;
+    }
+    
+    #contenedor_tabla{
+        overflow-y: unset;
+        margin: 30px 0 0
+    }
+
+    #contenedor_tabla::-webkit-scrollbar {
+        display: none; /* Oculta la barra en Chrome, Safari y Edge */
+    }
+
+    article#contenedor_usuarios{
+        
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;   
+        margin: 0;
+    }
+
+    div#cont_busqueda_add{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+   div#cont_busqueda_add #cont_busqueda_usuario{
+        width: clamp(210px, 70%, 222px);
+   }
+   div#cont_busqueda_add #cont_busqueda_usuario i{
+        margin: 5px;
+   }
+
+   div#cont_busqueda_add #agregar_usuario{
+    width: 41px;
+   }
+
+   div#cont_busqueda_add #agregar_usuario i{
+        margin: 5px;
+   }
+
+   select#filtro_usuarios, select{
+        padding: 7px;
+        display: block;
+        width: clamp(140px, 30%, 158px);
+    }
+    
+    article.card_usuario{
+        margin-bottom: 1em;
+        display: block;
+       
+    }
+
+    article.card_usuario h3{
+        display: block;
+    }
+
+    article.card_usuario #cont_opc{
+        
+        display: flex;
+        gap: 5px;
+    }
+
+    #mensaje_no{
+        margin-bottom: 153px;
+        position: relative;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+        
+      }
+    .modal-bloque h3{
+        font-size: 18px;
+    }
+
+    .activar{
+        color: #fd7e14;
+        margin: 0;
+        
+    }
+    .activar:hover{
+        color: #fd7e14;
+        cursor: pointer;
+        transform: scale(1.30);
+    }
+    .card_usuario .icon{
+        color: var(--color_fondo-pr);
+        margin: 0;
+    }
+    .edit{
+        color: var(--color-edit);
+        margin: 0;
+    }
+    .desac{
+        color: black;
+        margin: 0;
+        
+    }
+}
+

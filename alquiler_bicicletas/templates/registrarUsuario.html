@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRAR</title>
+    <link href="{{ url_for('static', filename='css/formato_02.css') }}" rel="stylesheet">
+    
+</head>
+<body>
+
+    <main id="cuerpo">
+        <form method="post" name="forma_registro" id="forma_registro">
+            <div class="sesion-01">
+                <h1 class="titulo">Bienvenido Biciweb</h1>
+            </div>
+
+            <div id="sesion-02">
+                <h2>REGISTRAR</h2>
+                
+                <input type="text" name="nombres" class="ancho-full" id="nombres" class="campo"  maxlength="24" minlength="2" required tabindex="3" title="solo letras el digitar letras porfa" placeholder="nombres">
+                <div id="error-nombres" class="error-message"></div>
+
+                <input type="text" name="apellidos" class="ancho-full" id="apellidos"  maxlength="24" minlength="2" required tabindex="4" title="solo letras el digitar letras porfa" placeholder="apellidos">
+                <div id="error-apellidos" class="error-message"></div>
+                
+                    
+                <select name="estrato" id="estrato" required>
+                        <option value="">estrato socioeconomico</option>
+                        <option value="1">estrato 1</option>
+                        <option value="2">estrato 2</option>
+                        <option value="3">estrato 3</option>
+                        <option value="4">estrato 4</option>
+                        <option value="5">estrato 5</option>
+                        <option value="6">estrato 6</option>
+                </select>
+                
+                
+                <div id="error-estrato" class="error-message"></div>
+
+                <input type="email" name="correo" class="ancho-full" id="correo" inputmode="email"  placeholder="email" required tabindex="5" maxlength="64" minlength="8">
+                <div id="error-correo" class="error-message"></div>
+
+                <input type="password" name="contrasena" class="ancho-full" id="contrasena" class="campo" maxlength="24" minlength="2" required tabindex="3" title="solo letras el digitar letras porfa" placeholder="contraseña">
+                <div id="error-contrasena" class="error-message"></div>
+
+                <input type="password" name="confirmar" class="ancho-full" id="confirmar" class="campo"  maxlength="24" minlength="2" required tabindex="3" title="solo letras el digitar letras porfa" placeholder="confirmar contraseña">
+                <div id="error-confirmar-contrasena" class="error-message"></div>
+
+                <button type="submit" id="btn_registro"  class="btn-activo ">REGISTRAR</button>
+                
+            </div>
+                        
+        </form>
+
+        
+    </main>
+    <script src="{{ url_for('static', filename='js/usuarios/validarRegistro.js') }}"></script>
+</body>
+</html>

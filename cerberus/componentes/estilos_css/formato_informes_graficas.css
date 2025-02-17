@@ -1,0 +1,212 @@
+
+
+#contenedor-fila-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 19px auto 25px;
+}
+
+#contenedor-botones {
+    display: flex;
+    margin: 0;
+    border-radius: 10px;
+    gap: 1em;
+}
+
+#contenedor-fecha input[type="date"] {
+    border: 1px solid #007735;
+    background: #F1F1F1;
+    margin: 0;
+    padding: 9px 4px;
+    font-size: 2vh;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    transition: transform 0.2s, color 0.1s;
+    margin-right: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+#contenedor-opciones select:hover,
+#contenedor-fecha input[type="date"]:hover {
+    background: #007735;
+    color: #fff;
+    border-color: #005f2b;
+}
+
+#contenedor-fila-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto auto 25px;
+    gap: 5vh;
+}
+
+#btn-tabla, #btn-grafica {
+    border: none;
+    background: var(--color-fondo-b);
+    margin: 0;
+    padding: 9px 14px;
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--color-blanco);
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    transition: transform 0.2s, color 0.1s;
+    margin-right: 1em;
+    text-align: center;
+}
+
+#btn-tabla:hover, #btn-grafica:hover {
+    transform: scale(1.1);
+}
+
+#contenedor-opciones, #contenedor-fechas {
+    display: flex;
+    border-radius: 10px;
+    gap: 1em;
+}
+
+#contenedor-opciones select, #contenedor-fechas input[type="date"] {
+    border: 1px solid #007735;
+    background: #F1F1F1;
+    margin: 0;
+    padding: 9px 4px;
+    font-size: 2vh;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    transition: transform 0.2s, color 0.1s;
+    width: 100%;
+    margin-right: 1em;
+}
+
+/* canvas {
+    width: 100% !important;
+   
+    margin: 0 auto;
+    border-radius: 8px;
+} */
+.chart-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    height: 225px;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 766px) {
+    #contenedor-fila-2 {
+        flex-direction: column;
+        gap: 1em;
+        margin: 1em auto;
+    }
+
+    #contenedor-botones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 2vh;
+        margin: 0;
+    }
+
+    #btn-tabla, #btn-grafica {
+        height: 5vh;
+        font-size: 14px;
+        width: 100%;
+        margin: 0;
+    }
+
+    #contenedor-fecha {
+        width: 100%;
+        order: 2;
+    }
+
+    #contenedor-fecha input[type="date"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #contenedor-opciones {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    #contenedor-opciones select {
+        font-size: 1.8vh;
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    .chart-container {
+        height: 390px;
+    }
+
+    #contenedor-opciones, #contenedor-fechas {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 19px;
+    }
+    #contenedor-fila-3 {
+        display: block;
+        margin: 0;
+    }
+   
+}
+
+@media (min-width: 767px) {
+    #contenedor-fila-2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 19px auto 25px;
+    }
+    
+
+    #contenedor-botones {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 2vh;
+    }
+
+    #contenedor-fila-3 {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        gap: 2vh;
+        margin: 19px auto 25px;
+    }
+
+    #btn-tabla, #btn-grafica {
+        background: #007735;
+        color: #F1F1F1;
+    }
+
+    #contenedor-buscador {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: clamp(4vh, 6vh, 8vh);
+    }
+
+    #contenedor-buscador input {
+        width: 100%;
+        height: clamp(4vh, 6vh, 8vh);
+    }
+}

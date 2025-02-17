@@ -1,0 +1,178 @@
+#forma_registro{
+    border-radius: 13px;
+    padding: 1.8em;
+    width: clamp(300px, 58%, 593px);
+    background: #E7E7E7;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    #forma_registro #contenedor_titulo_icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        #forma_registro #contenedor_titulo_icon h1{
+            color: #414043;
+            font-size: 1.5em;
+        }
+
+        #forma_registro #contenedor_titulo_icon .cerrar_modal{
+            color: red;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+    #forma_registro label{
+        color: #414043;
+        display: block;
+        margin-top: 1em;
+        font-size: 1em;
+    }
+
+    #forma_registro .campos{
+        color: #414043;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid;
+        background: transparent;
+        margin: 0.5em 0 1em 0;
+        font-size: 1em;
+    }
+
+    #forma_registro #numero_placa{
+       text-transform: uppercase; 
+    }
+
+    #forma_registro #grupo_1 .contenedor_btn{
+        display: flex;
+        justify-content: end;
+        margin: 0;
+        
+    }
+
+
+    #forma_registro #grupo_2 .contenedor_btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+        
+    }
+    
+    #forma_registro .btn{
+        background:  #007735;
+        color: #fff;
+        width: 60%;
+        border-radius: 13px;
+        padding: 10px;
+        font-size: 1em;
+        border: 0px;
+        margin: 16px 0 0;
+    }
+
+    #forma_registro #grupo_2 #contenedor_input_btn{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+        #forma_registro #grupo_2 #contenedor_input_btn input{
+            
+            width: 90%;
+        }
+
+        #forma_registro #grupo_2 #contenedor_input_btn label{
+            margin-top: 0;
+        }
+
+        #forma_registro #grupo_2 #contenedor_input_btn div{
+            width: 100%;
+        }
+
+        #forma_registro #grupo_2 #contenedor_input_btn #btn_agregar{
+            width: 25%;
+            height: 38px;
+            padding: 0;
+            font-size: 1.8em;
+            margin: 0;
+        }
+    
+    #contenedor_pasajeros{
+        max-height: 100px;
+        overflow-y: scroll;
+        margin-top: 1em;
+    }
+
+    #contenedor_pasajeros div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+    }
+
+    #contenedor_pasajeros div p{
+        font-size: 1.1em;
+        color: #414043;
+    }
+
+    #contenedor_pasajeros div i{
+        color: red;
+    }
+
+    #forma_registro #grupo_2{
+        display: none;
+    }
+
+
+@media (min-width: 1024px){
+
+    #fila_1{
+        display: flex;
+        justify-content: space-around;
+        gap: 2em;
+    }
+
+    #fila_2{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+        align-items: flex-end;
+    }
+
+    #bloque_1{
+        width: 100%;
+    }
+
+    #forma_registro .btn{
+        width: 208px;
+        margin: 0;
+    }
+
+    #contenedor_pasajeros {
+        max-height: none;
+        overflow-y: unset;
+        margin: 0;
+    }
+
+    #contenedor_pasajeros div {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        gap: 5em;
+        margin-top: 0.5em;
+    }
+}
+
+@media(max-width: 1023px){
+    #fila_2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

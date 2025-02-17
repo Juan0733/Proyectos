@@ -1,0 +1,110 @@
+#forma_registro{
+    border-radius: 13px;
+    padding: 1.8em;
+    width: clamp(340px, 52%, 532px);
+    background: #E7E7E7;
+    color: #414043;
+    transform: translateY(5px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+    #forma_registro #contenedor_titulo_icon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #forma_registro #contenedor_titulo_icon h1{
+        font-size: 1.2em;
+    }
+
+    #forma_registro #contenedor_titulo_icon .cerrar_modal{
+        color: red;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    
+
+    #forma_registro label{
+        display: block;
+        margin-top: 1em;
+        font-size: 1em;
+    }
+
+    #forma_registro input, select{
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid;
+        background: transparent ;
+        margin: 0.5em 0 1.5em 0;
+        font-size: 1em;
+    }
+    input:-webkit-autofill {
+        background-color: transparent !important; 
+    }
+
+    #forma_registro .contenedor_btn{
+        display: flex;
+        justify-content: center;
+        
+    }
+    /* #forma_registro select{
+        width: 100%;
+        
+    } */
+    #fila_select{
+        display: flex;
+        gap: 44px;
+    }
+    #puerta_registro{
+        width: 214px;
+    }
+    
+
+    #forma_registro .contenedor_btn .btn{
+        border: none;
+        background:  #007735;
+        color: #fff;
+        width: 60%;
+        border-radius: 13px;
+        padding: 10px;
+        font-size: 1em;
+        margin: 0;
+    }
+
+    @media(min-width: 1024px){
+        #fila_novedad{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    @media(min-width: 768px) and (max-width: 1023px){
+        #forma_registro select{
+            width: 100%;
+            
+        }
+        #fila_select{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        
+    }
+
+    @media (max-width: 640px) {
+        #forma_registro select{
+            width: 100%;
+            
+        }
+
+        #fila_select{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+    }

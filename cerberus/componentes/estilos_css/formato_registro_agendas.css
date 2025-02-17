@@ -1,0 +1,238 @@
+#forma_registro {
+    border-radius: 13px;
+    padding: 1.8em;
+    width: clamp(300px, 87%, 900px);;
+    background: #E7E7E7;
+    color: #414043;
+    
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#forma_registro #contenedor_titulo_icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#forma_registro #contenedor_titulo_icon h1 {
+    font-size: 1.5em;
+    /* margin-bottom: 20px; */
+}
+
+#forma_registro #contenedor_titulo_icon .cerrar_modal {
+    color: red;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.docex {
+    color: #007735;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.input_fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+}
+
+.input_grupo{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input_grupo input,
+.input_grupo select {
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid #414043;
+    padding: 5px;
+    font-size: 1em;
+    background: transparent;
+    color: #414043;
+    outline: none;
+}
+
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+}
+
+.input_grupo.select_group {
+    flex-basis: 50%;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+.input_grupo select {
+    width: 100%;
+    text-align: left;
+}
+#tipo_documento_a{
+    width: 266px;
+}
+#apellidos_g{
+    width: 282px;
+}
+.carga_masiva {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0.5em;
+}
+
+.carga_label {
+    color: #007735;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9em;
+}
+
+.contenedor_btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 3%;
+}
+
+.contenedor_btn .btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+#registrar, #agregar_vehiculo, .descargar_excel {
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#registrar {
+    background: #007735;
+    color: #ffffff;
+    border: none;
+}
+
+#registrar:hover {
+    background: #005522;
+}
+
+#agregar_vehiculo {
+    color: #007735;
+    border: 2px solid #007735;
+}
+
+#agregar_vehiculo:hover {
+    background: #007735;
+    color: #ffffff;
+}
+
+.descargar_excel {
+    display: inline-block;
+    background: #007735;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    width: 170px;
+}
+
+.descargar_excel:hover {
+    background: #005522;
+}
+
+#individual_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#cont_input_c{
+    width: 288px;
+    margin-right: 4em;
+}
+
+
+#contenedor_carga_masiva, #individual_section, #contenedor_tipo_doc, #contenedor_numero_doc{
+    display: none;
+}
+
+#individual_section{
+    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+    #forma_registro {
+        width: 70%;
+        max-height: 80vh;
+        padding: 1em;
+        overflow-y: auto;
+    }
+    .input_grupo{
+        width: 100%;
+    }
+    
+    
+
+    .input_fila {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contenedor_btn {
+        width: 100%;
+    }
+
+    #individual_section .input_grupo {
+        width: 100%;
+    }
+
+    .carga_masiva {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #agregar_vehiculo, .descargar_excel, #registrar {
+        width: 100%;
+    }
+    .input_grupo select {
+        width: 95%;
+        text-align: left;
+    }
+    #tipo_documento_a{
+        width: 95%;
+    }
+    #apellidos_g{
+        width: 100%;
+    }
+    .contenedor_btn {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #cont_input_c{
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    #forma_registro {
+        width: 90%;
+        margin-top: 1em;
+    }
+}
